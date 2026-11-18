@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand-mark">SR</div>
+      <div><p class="eyebrow">ADMISSIONS PORTAL</p><h1>Student Registration</h1>
+      <p class="subtitle">Create your student profile to begin your application.</p></div>
+    </header>
+    <section class="panel">
+      <form id="registration-form" novalidate>
+        <div class="form-grid">
+          <label>Full name<input data-testid="name" name="name" placeholder="e.g. Asha Kumar" autocomplete="name"><small data-error="name"></small></label>
+          <label>Email address<input data-testid="email" name="email" type="email" placeholder="name@example.com" autocomplete="email"><small data-error="email"></small></label>
+          <label>Mobile number<input data-testid="phone" name="phone" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number"><small data-error="phone"></small></label>
+          <label>Age<input data-testid="age" name="age" type="number" min="16" max="100" placeholder="16–100"><small data-error="age"></small></label>
+          <label class="wide">Choose course
+            <select data-testid="course" name="course">
+              <option value="">Select a course</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Information Science">Information Science</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Mechanical">Mechanical</option>
+            </select><small data-error="course"></small>
+          </label>
+          <label class="wide">Create password<input data-testid="password" name="password" type="password" placeholder="At least 8 characters"><small data-error="password"></small></label>
+        </div>
+        <button data-testid="submit" type="submit">Submit registration</button>
+        <p id="result" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <footer>Demo application for Software Testing &amp; Quality Assurance</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
